@@ -76,5 +76,5 @@ Once the ollama setup is completed, open a shell/cmd prompt and run the below to
 
 ### Update any hostname/ip in the application.yaml after cloning the application with appropriate hostname/ip.
 
-    git clone <repo-url>
+    git clone git@github.com:bhaskaro/chatwithdocs.git
     ./mvnw spring-boot:run
