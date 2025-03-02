@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.file-upload-section, .uploaded-files-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.expandable {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.uploaded-files {
+    display: none;
+    margin-top: 10px;
+}
+
+.file-upload-section h3 {
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.file-upload-section .file-types {
+    display: block;
+    font-size: 0.675rem; /* Smaller font size */
+    color: #888; /* Light gray color */
+    margin-top: 5px; /* Space between the file input and file types text */
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.file-item span {
+    word-break: break-all;
+}
+
+.chat-input {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+}

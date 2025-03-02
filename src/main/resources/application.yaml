@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: chatwithdocs
+  
+  #   spring.ai.openai.api-key=${OPENAI_API_KEY}
+  #   spring.ai.openai.chat.options.model=gpt-4o-mini
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      #      base-url: http://192.168.0.106:11434
+      chat:
+        options:
+          model: llama3.2
+          temperature: 0.5
+
+    vectorstore:
+      oracle:
+        index-type: IVF
+        distance-type: COSINE
+        dimensions: 1536
+  datasource:
+    url: jdbc:oracle:thin:@192.168.0.105:1521/FREEPDB1
+    username: sys as sysdba
+    password: welcome1
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # Can be change to 'none', 'validate', or 'create-drop' based on your needs
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 25MB
+      max-request-size: 25MB
+  server:
+    tomcat:
+      max-http-post-size: 25MB

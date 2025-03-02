@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat With Documents</title>
+    <!-- Link to External CSS -->
+    <link href="/css/chat.css" rel="stylesheet">
+    <!-- Link to External JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="/js/chat.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Chat With Documents</h1>
+
+    <!-- File Upload Section -->
+    <div class="file-upload-section">
+        <h3>Upload Files</h3>
+        <form enctype="multipart/form-data" id="fileUploadForm" method="POST" th:action="@{/file/upload}">
+            <input id="fileInput" multiple name="files" type="file">
+            <button type="submit">Upload</button>
+        </form>
+        <small class="file-types">Accepted file types: *.pdf, *.txt, *.md</small>
+    </div>
+
+    <!-- Uploaded Files Section -->
+    <div class="uploaded-files-section">
+        <h3 class="expandable">Uploaded Files <i class="fas fa-chevron-down"></i></h3>
+        <div class="uploaded-files">
+            <div id="uploadedFilesList">
+                <!-- Uploaded files will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Input Section -->
+    <div class="chat-input">
+        <h3>Chat</h3>
+        <textarea cols="50" id="chatPrompt" placeholder="Enter your prompt..." rows="4"></textarea>
+        <button id="sendPrompt">Send</button>
+    </div>
+
+    <!-- Chat Response Section -->
+    <div id="chatResponse" style="margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+        <h3>Response</h3>
+        <div id="responseContent"></div>
+    </div>
+</div>
+
+</body>
+</html>
