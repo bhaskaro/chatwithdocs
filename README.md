@@ -6,6 +6,7 @@
 
 ## 1. Oracle 23ai setup details
 
+    # run oracle as docker container by running the below.
     docker run -d --name 23ai \  
     -p 1521:1521 \  
     -e ORACLE_PWD="welcome1" \  
