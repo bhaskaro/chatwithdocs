@@ -80,4 +80,4 @@ Once the ollama setup is completed, open a shell/cmd prompt and run the below to
     git clone git@github.com:bhaskaro/chatwithdocs.git
     ./mvnw spring-boot:run
 
-Once the application is up, you can access it with http://localhost:8080
+Once the application is up, you can access it with [http://localhost:8080](http://localhost:8080/chat)
